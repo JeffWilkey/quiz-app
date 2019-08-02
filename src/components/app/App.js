@@ -7,7 +7,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 0
+      page: 1,
+      numCorrectAnswers: 0,
+      numIncorrectAnswers: 0
     }
   }
   handlePageNext = (e) => {
@@ -24,6 +26,8 @@ class App extends React.Component {
           page={this.state.page}
           questions={questions}
           handlePageNext={this.handlePageNext}
+          numCorrectAnswers={this.state.numCorrectAnswers}
+          numIncorrectAnswers={this.state.numIncorrectAnswers}
         />
       </div>
     );

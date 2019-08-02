@@ -11,7 +11,12 @@ class Quiz extends React.Component {
         {this.props.page === 0 ?
           <QuizEntry handlePageNext={this.props.handlePageNext}/>
           :
-          <QuizQuestion page={this.props.page} handlePageNext={this.props.handlePageNext} />
+          <QuizQuestion 
+            page={this.props.page}
+            handlePageNext={this.props.handlePageNext}
+            numCorrectAnswers={this.props.numCorrectAnswers}
+            numIncorrectAnswers={this.props.numIncorrectAnswers}
+          />
         }
       </div>
     );

@@ -1,0 +1,75 @@
+.questionIndex {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.questionCurrentScore {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  font-weight: bold;
+}
+
+.questionDivider {
+  width: 80px;
+  height: 4px;
+  margin: 20px auto;
+  background-color: #eaeaea;
+  border-radius: 2px;
+}
+
+.questionImage {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border: 8px solid;
+}
+
+.questionFormWrap {
+  text-align: center;
+}
+
+.questionForm {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  text-align: left;
+}
+
+.questionFieldset {
+  width: 80%;
+  border: none;
+  margin: 0 auto;
+}
+
+.questionLegend {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+input[type="radio"] {
+  vertical-align: top;
+  margin: 5px 15px 15px 0;
+}
+
+.answer {
+  display: inline;
+  font-size: 1.2em;
+}
+
+.questionSubmit {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  transition: .2s;
+  cursor: pointer;
+  display: block;
+  margin: 15px auto;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+}

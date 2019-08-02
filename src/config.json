@@ -8,9 +8,14 @@
   "startButtonText": "Get Started",
   "backgroundImage": "background.jpg",
   "containerColor": "#fff",
+  "containerAccentColor": "#eaeaea",
   "buttonColor": "#e74c3c",
   "buttonHoverColor": "#e56357",
   "buttonTextColor": "#fff",
+  "quizTextColor": "#000",
+  "questionScoreCorrectColor": "#2ecc71",
+  "questionScoreIncorrectColor": "#e74c3c",
+  "submitText": "Submit",
   "questions": [
     {
       "body": "In 'Space Pilot 3000' who is the first main character that Fry meets?",
