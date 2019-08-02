@@ -16,10 +16,10 @@ class QuizQuestion extends React.Component {
   }
 
   renderAnswers = () => {
-    return config.questions[this.props.page - 1].answers.map(answer => {
+    return config.questions[this.props.page - 1].answers.map((answer, index) => {
       return (
         <div key={answer}>
-          <input type="radio" name="question" value={0}/>
+          <input type="radio" name="question" value={index}/>
           <label className="answer">{answer}</label>
         </div>
       )
