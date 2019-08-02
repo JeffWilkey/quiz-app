@@ -1,14 +1,33 @@
 import React from 'react';
-import { backgroundImage } from '../../config.json';
-import logo from './logo.svg';
+import { backgroundImage, questions } from '../../config.json';
+import Quiz from '../quiz/Quiz';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App" style={{ backgroundImage: `url('${window.location.origin}/${backgroundImage}')`}}>
-      
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      page: 0
+    }
+  }
+  handlePageNext = (e) => {
+    if (this.state.page < questions.length) {
+      this.setState({
+        page: this.state.page + 1
+      })
+    }
+  }
+  render() {
+    return (
+      <div className="App" style={{ backgroundImage: `url('${window.location.origin}/${backgroundImage}')`}}>
+        <Quiz 
+          page={this.state.page}
+          questions={questions}
+          handlePageNext={this.handlePageNext}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
