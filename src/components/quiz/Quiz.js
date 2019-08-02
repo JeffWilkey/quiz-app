@@ -16,6 +16,7 @@ class Quiz extends React.Component {
             handlePageNext={this.props.handlePageNext}
             numCorrectAnswers={this.props.numCorrectAnswers}
             numIncorrectAnswers={this.props.numIncorrectAnswers}
+            handleAnswer={this.props.handleAnswer}
           />
         }
       </div>

@@ -41,7 +41,7 @@ class QuizQuestion extends React.Component {
           style={{ borderColor: config.containerAccentColor }}
         />
         <div className="questionFormWrap">
-          <form className="questionForm">
+          <form className="questionForm" onSubmit={this.props.handleAnswer}>
             <fieldset className="questionFieldset">
               <legend className="questionLegend">
                 {config.questions[this.props.page - 1].body}

@@ -12,12 +12,17 @@ class App extends React.Component {
       numIncorrectAnswers: 0
     }
   }
-  handlePageNext = (e) => {
-    if (this.state.page < questions.length) {
+  handlePageNext = () => {
+    if (this.state.page < questions.length + 1) {
       this.setState({
         page: this.state.page + 1
       })
     }
+  }
+
+  handleAnswer = (e) => {
+    e.preventDefault();
+    this.handlePageNext();
   }
   render() {
     return (
@@ -28,6 +33,7 @@ class App extends React.Component {
           handlePageNext={this.handlePageNext}
           numCorrectAnswers={this.state.numCorrectAnswers}
           numIncorrectAnswers={this.state.numIncorrectAnswers}
+          handleAnswer={this.handleAnswer}
         />
       </div>
     );

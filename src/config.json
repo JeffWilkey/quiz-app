@@ -25,22 +25,22 @@
     },
     {
       "body": "In 'The Series Has Landed' what was the name of the amusement park on the moon?",
-      "image": "http://images2.fanpop.com/images/photos/7300000/Futurama-1x02-The-Series-Has-Landed-futurama-7312946-500-333.jpg",
+      "img": "http://images2.fanpop.com/images/photos/7300000/Futurama-1x02-The-Series-Has-Landed-futurama-7312946-500-333.jpg",
       "answers": ["Lunar Park", "Mars University", "Wong Ranch", "Moon Spacefun"],
       "correctAnswerIndex": 0
     }, {
       "body": "In 'When Aliens Attack' what planet are the aliens from?",
-      "image": "http://slurmed.com/fgrabs/01acv12/01acv12_045.jpg",
+      "img": "http://slurmed.com/fgrabs/01acv12/01acv12_045.jpg",
       "answers": ["Omicron Persia 11", "Omicron Persia 8", "Mars", "Amazonia"],
       "correctAnswerIndex": 1
     }, {
       "body": "In 'Hell Is Other Robots' where was robot hell?",
-      "image": "https://horrorpediadotcom.files.wordpress.com/2014/04/robot-hell.png",
+      "img": "https://horrorpediadotcom.files.wordpress.com/2014/04/robot-hell.png",
       "answers": ["Utah", "Alabama", "Texas", "New Jersey"],
       "correctAnswerIndex": 3
     }, {
       "body": "In 'Fear of Bot Planet' what fake religious robot holiday did Bender make up?",
-      "image": "http://images2.fanpop.com/image/photos/12400000/1x05-Fear-of-a-Bot-Planet-futurama-12425237-500-375.jpg",
+      "img": "http://images2.fanpop.com/image/photos/12400000/1x05-Fear-of-a-Bot-Planet-futurama-12425237-500-375.jpg",
       "answers": ["Bot-Mitvah", "Robanza", "Robonukah", "Robotisam"],
       "correctAnswerIndex": 2
     }
