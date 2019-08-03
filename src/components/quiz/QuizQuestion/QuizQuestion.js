@@ -76,8 +76,10 @@ class QuizQuestion extends React.Component {
     return config.questions[this.props.page - 1].answers.map((answer, index) => {
       return (
         <div key={answer}>
-          <input type="radio" name="question" value={index} onClick={this.setAnswer}/>
-          <label className="answer">{answer}</label>
+          <label className="answer">
+            <input type="radio" name="question" value={index} onClick={this.setAnswer}/>
+            {answer}
+          </label>
         </div>
       )
     })
