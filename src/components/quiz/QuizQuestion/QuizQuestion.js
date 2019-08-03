@@ -19,7 +19,8 @@ class QuizQuestion extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (prevProps.page !== this.props.page) {
       this.setState({
-        questionAnswered: false
+        questionAnswered: false,
+        showAnswerResponse: null
       })
     }
   }
@@ -83,11 +84,9 @@ class QuizQuestion extends React.Component {
   }
 
   renderAnswerResponseText = (currentQuestion) => {
-    if (this.state.currentPage === this.props.page) {
-      if (this.state.showAnswerResponse === "correct") return (<p className="answerResponse" style={{ color: config.questionScoreCorrectColor }}>{config.correctAnswerText}</p>)
-      else if (this.state.showAnswerResponse === "incorrect") return (<p className="answerResponse" style={{ color: config.questionScoreIncorrectColor }}>{config.incorrectAnswerText} <strong>{currentQuestion.answers[currentQuestion.correctAnswerIndex]}</strong></p>)
-      else if (this.state.showAnswerResponse === "none") return (<p className="answerResponse" style={{ color: config.questionScoreWarningColor}}>{config.questionNotAnsweredText}</p>);
-    }
+    if (this.state.showAnswerResponse === "correct") return (<p className="answerResponse" style={{ color: config.questionScoreCorrectColor }}>{config.correctAnswerText}</p>)
+    else if (this.state.showAnswerResponse === "incorrect") return (<p className="answerResponse" style={{ color: config.questionScoreIncorrectColor }}>{config.incorrectAnswerText} <strong>{currentQuestion.answers[currentQuestion.correctAnswerIndex]}</strong></p>)
+    else if (this.state.showAnswerResponse === "none") return (<p className="answerResponse" style={{ color: config.questionScoreWarningColor}}>{config.questionNotAnsweredText}</p>);
   }
 
   render() {
