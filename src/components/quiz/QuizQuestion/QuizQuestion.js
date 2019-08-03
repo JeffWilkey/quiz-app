@@ -45,7 +45,8 @@ class QuizQuestion extends React.Component {
     let answerCorrect;
     
     if (this.state.selectedAnswer && Number(this.state.selectedAnswer) === Number(currentQuestion.correctAnswerIndex)) answerCorrect = true;
-    else answerCorrect = false;
+    else if (this.state.selectedAnswer) answerCorrect = false;
+    else answerCorrect = null;
 
     if (answerCorrect === null) this.setState({ showAnswerResponse: "none" })
     else if (answerCorrect === true) this.setState({ showAnswerResponse: "correct" })
@@ -54,7 +55,7 @@ class QuizQuestion extends React.Component {
     // this.props.handleAnswer(e);
     this.setState({
       submitButtonClicked: true,
-      questionAnswered: true,
+      questionAnswered: answerCorrect !== null ? true : false,
       answerCorrect
     });
     if (this.state.selectedAnswer && answerCorrect !== null) {
