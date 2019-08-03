@@ -20,10 +20,12 @@ class App extends React.Component {
     }
   }
 
-  handleAnswer = (e) => {
-    e.preventDefault();
-    this.handlePageNext();
+  handleAnswerSubmission = (validAnswer) => {
+    // console.log(validAnswer);
+    if (validAnswer) this.setState({ numCorrectAnswers: this.state.numCorrectAnswers + 1 })
+    else this.setState({ numIncorrectAnswers: this.state.numIncorrectAnswers + 1 })
   }
+
   render() {
     return (
       <div className="App" style={{ backgroundImage: `url('${window.location.origin}/${backgroundImage}')`}}>
@@ -34,6 +36,7 @@ class App extends React.Component {
           numCorrectAnswers={this.state.numCorrectAnswers}
           numIncorrectAnswers={this.state.numIncorrectAnswers}
           handleAnswer={this.handleAnswer}
+          handleAnswerSubmission={this.handleAnswerSubmission}
         />
       </div>
     );

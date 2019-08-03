@@ -17,6 +17,7 @@ class Quiz extends React.Component {
             numCorrectAnswers={this.props.numCorrectAnswers}
             numIncorrectAnswers={this.props.numIncorrectAnswers}
             handleAnswer={this.props.handleAnswer}
+            handleAnswerSubmission={this.props.handleAnswerSubmission}
           />
         }
       </div>
