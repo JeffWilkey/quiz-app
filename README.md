@@ -1,68 +1,83 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# React Quiz Application Template
 
-### `npm start`
+#### Easily put together a quiz and customize it through 1 json file
+See running example at: [limitless-reef-93222.herokuapp.com/](https://limitless-reef-93222.herokuapp.com/)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Documentation
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### Customization
+Customize the template through `./src/config.json`
+```
+{
+  "title":  "The Planet Express Quiz",
+  "titleColor":  "#333",
+  "quizLogo":  "planet-express.png",
+  "subtext":  "Welcome to the Quiz. ",
+  "subtext2":  "Try to get as many questions right as you can.",
+  "subtextColor":  "#000",
+  "startButtonText":  "Get Started",
+  "backgroundImage":  "background.jpg",
+  "containerColor":  "#fff",
+  "containerAccentColor":  "#eaeaea",
+  "buttonColor":  "#e74c3c",
+  "buttonHoverColor":  "#e56357",
+  "buttonTextColor":  "#fff",
+  "quizTextColor":  "#000",
+  "questionScoreCorrectColor":  "#2ecc71",
+  "questionScoreIncorrectColor":  "#e74c3c",
+  "questionScoreWarningColor":  "#ff9f43",
+  "submitText":  "Submit",
+  "nextButtonText":  "Next Question",
+  "correctAnswerText":  "Correct!",
+  "incorrectAnswerText":  "Incorrect, the correct answer was:",
+  "questionNotAnsweredText":  "Doh! you forgot to choose an answer.",
+  "resultsHeader":  "Results",
+  "congratsGif":  "congrats.gif",
+  "startOverButtonText":  "Start Over",
+  "questions":  [{
+    "body":  "In 'Space Pilot 3000' who is the first main character that Fry meets?",
+    "img":  "http://slurmed.com/fgrabs/01acv01/01acv01_019.jpg",
+    "answers":  ["Zoidberg",  "Leela",  "Bender",  "Professor Hubert J. Farnsworth"],
+    "correctAnswerIndex":  1
+  },
+  {
+    "body":  "In 'The Series Has Landed' what was the name of the amusement park on the moon?",
+    "img":  "http://images2.fanpop.com/images/photos/7300000/Futurama-1x02-The-Series-Has-Landed-futurama-7312946-500-333.jpg",
+    "answers":  ["Lunar Park",  "Mars University",  "Wong Ranch",  "Moon Spacefun"],
+    "correctAnswerIndex":  0
+  },
+  {
+    "body":  "In 'When Aliens Attack' what planet are the aliens from?",
+    "img":  "http://slurmed.com/fgrabs/01acv12/01acv12_045.jpg",
+    "answers":  ["Omicron Persia 11",  "Omicron Persia 8",  "Mars",  "Amazonia"],
+    "correctAnswerIndex":  1
+  },
+  {
+    "body":  "In 'Hell Is Other Robots' where was robot hell?",
+    "img":  "https://horrorpediadotcom.files.wordpress.com/2014/04/robot-hell.png",
+    "answers":  ["Utah",  "Alabama",  "Texas",  "New Jersey"],
+    "correctAnswerIndex":  3
+  },
+  {
+    "body":  "In 'Fear of Bot Planet' what fake religious robot holiday did Bender make up?",
+    "img":  "http://images2.fanpop.com/image/photos/12400000/1x05-Fear-of-a-Bot-Planet-futurama-12425237-500-375.jpg",
+    "answers":  ["Bot-Mitvah",  "Robanza",  "Robonukah",  "Robotisam"],
+    "correctAnswerIndex":  2
+  }]
+}
+```
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Image Assets
+Image assets should be stored in the `./public` folder for the application to work correctly. Then inside of `./src/config.json`
+you reference them by just the filename and extension:
+```
+...
+"quizLogo": "planet-express.png"
+...
+"backgroundImage":  "background.jpg",
+...
+"congratsGif": "congrats.gif"
+...
+```
