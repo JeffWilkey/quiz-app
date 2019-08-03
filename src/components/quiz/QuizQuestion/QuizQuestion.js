@@ -89,6 +89,7 @@ class QuizQuestion extends React.Component {
     if (this.state.showAnswerResponse === "correct") return (<p className="answerResponse" style={{ color: config.questionScoreCorrectColor }}>{config.correctAnswerText}</p>)
     else if (this.state.showAnswerResponse === "incorrect") return (<p className="answerResponse" style={{ color: config.questionScoreIncorrectColor }}>{config.incorrectAnswerText} <strong>{currentQuestion.answers[currentQuestion.correctAnswerIndex]}</strong></p>)
     else if (this.state.showAnswerResponse === "none") return (<p className="answerResponse" style={{ color: config.questionScoreWarningColor}}>{config.questionNotAnsweredText}</p>);
+    else return (<div style={{ height: '37px' }}></div>)
   }
 
   render() {
