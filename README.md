@@ -1,5 +1,3 @@
-
-
 # React Quiz Application Template
 
 #### Easily put together a quiz and customize it through 1 json file
@@ -8,8 +6,10 @@ See running example at: [limitless-reef-93222.herokuapp.com/](https://limitless-
 ### Documentation
 
 #### Customization
+
 Customize the template through `./src/config.json`
-```
+
+```json
 {
   "title":  "The Planet Express Quiz",
   "titleColor":  "#333",
@@ -70,9 +70,11 @@ Customize the template through `./src/config.json`
 ```
 
 #### Image Assets
+
 Image assets should be stored in the `./public` folder for the application to work correctly. Then inside of `./src/config.json`
 you reference them by just the filename and extension:
-```
+
+```json
 ...
 "quizLogo": "planet-express.png"
 ...
@@ -81,3 +83,7 @@ you reference them by just the filename and extension:
 "congratsGif": "congrats.gif"
 ...
 ```
+
+#### Note
+
+- Currently the value for site title is hard-coded so you must change it in `./public/index.html`
