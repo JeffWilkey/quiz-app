@@ -58,6 +58,7 @@ class QuizQuestion extends React.Component {
       questionAnswered: answerCorrect !== null ? true : false,
       answerCorrect
     });
+    
     if (this.state.selectedAnswer && answerCorrect !== null) {
       console.log('answer submitted');
       this.setState({

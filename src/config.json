@@ -21,6 +21,9 @@
   "correctAnswerText": "Correct!",
   "incorrectAnswerText": "Incorrect, the correct answer was:",
   "questionNotAnsweredText": "Doh! you forgot to choose an answer.",
+  "resultsHeader": "Results",
+  "congratsGif": "congrats.gif",
+  "startOverButtonText": "Start Over",
   "questions": [
     {
       "body": "In 'Space Pilot 3000' who is the first main character that Fry meets?",

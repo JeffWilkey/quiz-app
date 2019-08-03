@@ -9,7 +9,7 @@ class Quiz extends React.Component {
   renderQuizDisplay = () => {
     if (this.props.page === 0) {
       return <QuizEntry handlePageNext={this.props.handlePageNext}/>
-    } else if (this.props.page !== config.questions.length) {
+    } else if (this.props.page !== config.questions.length + 1) {
       return (
         <QuizQuestion 
           page={this.props.page}
@@ -21,7 +21,7 @@ class Quiz extends React.Component {
         />
       )
     } else {
-      return <QuizFinish/>
+      return <QuizFinish numCorrectAnswers={this.props.numCorrectAnswers} reset={this.props.reset}/>
     }
   }
   render() {

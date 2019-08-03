@@ -26,6 +26,14 @@ class App extends React.Component {
     else this.setState({ numIncorrectAnswers: this.state.numIncorrectAnswers + 1 })
   }
 
+  reset = () => {
+    this.setState({
+      page: 0,
+      numCorrectAnswers: 0,
+      numIncorrectAnswers: 0
+    });
+  }
+
   render() {
     return (
       <div className="App" style={{ backgroundImage: `url('${window.location.origin}/${backgroundImage}')`}}>
@@ -37,6 +45,7 @@ class App extends React.Component {
           numIncorrectAnswers={this.state.numIncorrectAnswers}
           handleAnswer={this.handleAnswer}
           handleAnswerSubmission={this.handleAnswerSubmission}
+          reset={this.reset}
         />
       </div>
     );
